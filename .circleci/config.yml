@@ -41,6 +41,9 @@ jobs:
       - run:
           name: Pull translations
           command: crowdin pull -b ${CIRCLE_BRANCH}
+      - run:
+          name: print environment variables
+          command: printenv
       - persist_to_workspace:
           root: .
           paths:
